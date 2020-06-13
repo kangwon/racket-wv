@@ -24,8 +24,7 @@
       (map (lambda (token) (first (string-split token "/"))) 
         (string-split line)))))
 
-(write-file
-  "data/brown-sentence.txt"
+(write-file "data/brown-sentence.txt"
   (string-join-\n
     (for/list ([filename filenames])
       (string-join-\n

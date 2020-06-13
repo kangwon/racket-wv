@@ -91,8 +91,7 @@
 (println (format "~a samples build." (length samples)))
 
 (define output "data/samples.txt")
-(write-file
-  output
+(write-file output
   (string-join-\n 
     (map (lambda (s) (apply format "~a ~a ~a" s)) samples)))
 (println (format "~a saved." output))
